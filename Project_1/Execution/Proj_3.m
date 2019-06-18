@@ -1,0 +1,94 @@
+%% --------------------------- Missile Parameters ------------------------- %
+clc; clear all; close all; set(0,'defaultfigurecolor',[1 1 1]);
+global tF rho_v rho_w M_d T_m Vc tau N K K_dth dt tout resolution 
+
+% ------------------- Initialize Simulation ------------------- %
+MP = 1; NMP = -1; Dyn_sgn = [1 -1];
+tF = 3;                     % Simulation Duration
+resolution = 5;            % Level of manuever division
+
+% --------------- Noise is independemt Variable --------------- %
+rho_w_min = -6;             % Target Acc. Bound [m/sec2]
+rho_w_max = -3;             % Upper  Acc. Bound [m/sec2]
+rho_i = logspace(rho_w_min, rho_w_max, resolution);
+
+% -------------- Manuever is independemt Variable ------------- % 
+% rho_v_min = 10;           % Target Acc. Bound [m/sec2]
+% rho_v_max = 20;           % Upper  Acc. Bound [m/sec2]
+% rho_i = linspace(rho_v_min, rho_v_max, resolution);
+
+% --------------------- Adjoint Execution --------------------- %
+hold on;
+for j=1:2
+    parameters(Dyn_sgn(j));     % j==1 (MP)  j==2 (NMP)
+    for i=1:resolution
+%         rho_w = rho_i(i);
+        rho_v = rho_i(i);
+        sim('System_Adjoint');
+        % ------------ Worst Target Manuever ------------ %
+        %         vec_w(j,i).Data = m_T_worst.Data;
+        % ------------ MD Vs. bounded noise ------------- %
+        %       vec_w(j,i).Data = m_b_n_w.Data;
+        %         MD_max(j,i) = vec_w(j,i).Data(end);
+        % ---------- Bang bang Manuever Timing ---------- %
+                vec_w(j,i).Data = m_T_worst.Data;
+                vec_opt(j,i).Data = m_T_opt.Data;
+        % --------- Bounded Manuever & Noise MD --------- %
+%         vec_bn(j,i).Data = m_b_n_w.Data;
+    end
+end
+
+%%
+tout = m_T_worst.Time;
+MP = 1; NMP = 2;
+Proj_step_timing(vec_w, vec_opt, MP);
+
+%%
+close all; hold on;
+for i=1:resolution
+plot( m_T_worst.Time, vec_opt(2,i).Data, 'b-', 'LineWidth', 1.5 )
+plot( m_T_worst.Time, vec_w(2,i).Data, 'r--', 'LineWidth', 1.5 )
+end
+%Proj_step_timing
+
+%% ------------------ Adjoint Execution + Plot 3D ------------------ %
+tout = m_T_worst.Time;
+v_len = ones(1, length(m_T_worst.Time) );
+
+hold on;
+for j=1:2
+    for i=1:resolution
+        Z(:,i,j) = vec_w(j,i).Data;
+        plot3(Dyn_sgn(j)*v_len, tout,  vec_w(j,i).Data, 'k--', 'LineWidth', 1.5);
+    end
+end
+
+% -------------------- Surface Spanning over 3D -------------------- %
+hold on;
+A = [Z(:,1,1) Z(:,1,2)];
+surf(1:-2:-1, tout, A, 'LineStyle', ':', 'FaceAlpha', 0.25, 'EdgeColor', [.7 .7 .7]);
+B = [Z(:,end,1) Z(:,end,2)];
+surf(1:-2:-1, tout, B, 'LineStyle', ':', 'FaceAlpha', 0.10, 'EdgeColor', [.7 .7 .7]);
+view([60 20]);
+
+% -------------------------- Latex Graphs -------------------------- %
+configaration = {'NMP'; 'MP'};
+set(gca,'xtick', -1:2:1, 'xticklabel', configaration, 'fontsize', 12);
+ind(1) = title( 'Miss Distance Vs. Bounded Manuever and Noise', 'fontsize', 16 );
+ind(2) = xlabel('Phase sign [$\pm$]');
+ind(3) = ylabel('$t_{go}$ [sec]');
+ind(4) = zlabel('Miss Distance [m]');
+set(ind, 'Interpreter', 'latex', 'fontsize', 14);
+
+%% ---------------- Settled Miss Distance Vs. Bounded Noise --------------- %
+% close all; 
+% semilogx(rho_i, MD_max(1,:), 'b-', 'LineWidth', 2);
+% hold on;
+% semilogx(rho_i, MD_max(2,:), 'r-', 'LineWidth', 2);
+% 
+% ind(1) = title( 'Settled Miss Distance Vs. Bounded Noise', 'fontsize', 16 );
+% ind(2) = ylabel('MD [m]');
+% ind(3) = xlabel('$\rho_w [\frac{m}{sec^2}]$');
+% ind(4) = legend('MP', 'NMP');
+% set(ind, 'Interpreter', 'latex', 'fontsize', 14);
+% xlim([1e-7 1e-2]); grid on;

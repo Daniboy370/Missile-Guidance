@@ -1,0 +1,55 @@
+%% --------------------------- Missile Parameters ------------------------- %
+clc; clear all; close all; set(0,'defaultfigurecolor',[1 1 1]);
+global tF rho_v rho_w M_d T_m Vc tau N K K_dth dt tout resolution
+
+% ------------------- Initialize Simulation ------------------- %
+MP = 1; NMP = -1; Dyn_sgn = [1 -1];
+tF = 4;                     % Simulation Duration
+
+parameters(1); 
+R_0 = Vc*tF;
+sim('Lambda_4');
+tout = m_delta.Time;
+
+%%
+figure(1); % close all; 
+semilogy(tout, 33.79-57.29*d_sigma.Data, '-', 'LineWidth', 3);
+% plot(tout, 57.29*d_sigma.Data, '-', 'LineWidth', 2);
+grid on; % ylim([1 1e6]);
+ind(1) = title( '$\dot{\sigma}$ vs. $t_{go}$' );
+ind(2) = ylabel('$\dot{\sigma}$ [$\frac{deg}{sec}$]'); % \frac{1}{sec^2}
+ind(3) = xlabel('$Time$ [sec]');
+set(ind, 'Interpreter', 'latex', 'fontsize', 22);
+%%
+figure(2); % close all;
+semilogy(tout, MD.Data, '-', 'LineWidth', 2);
+% plot(tout, MD.Data, '-', 'LineWidth', 2);
+grid on; %ylim([1e-2 1e6]); xlim([0 inf])
+ind(1) = title( 'Miss Distance vs. $t_{go}$' );
+ind(2) = ylabel('Miss Distance [m]'); % \frac{1}{sec^2}
+ind(3) = xlabel('$Time$ [sec]');
+set(ind, 'Interpreter', 'latex', 'fontsize', 22);
+
+%%
+figure(3); hold on; % close all;
+% semilogy(tout, -57.29*sigma.Data, '-', 'LineWidth', 2);
+plot(tout, +57.29*m_delta.data, '-', 'LineWidth', 3);
+plot(tout, -57.29*m_delta.data, '-', 'LineWidth', 3);
+grid on; %ylim([1e-2 1e6]); xlim([0 inf])
+ind(1) = title( '$\delta$ vs. $t_{go}$' );
+ind(2) = ylabel('$\delta$ [deg]'); % \frac{1}{sec^2}
+ind(3) = xlabel('$Time$ [sec]');
+ind(4) = legend('MP', 'NMP');
+
+set(ind, 'Interpreter', 'latex', 'fontsize', 22);
+ylim([-150 150]); 
+plot(tout, 30*ones(length(tout),1), 'k--', 'LineWidth', 2)
+plot(tout, -30*ones(length(tout),1), 'k--', 'LineWidth', 2)
+%%
+% view([-75 13]); % set(gca,'Ydir','reverse');
+% a = get(gca,'XTickLabel');
+% set(gca,'XTickLabel',a,'fontsize',12,'FontWeight','bold');
+% ind(1) = title( '$\delta$ Deflection Vs. $\tau$' );
+% ind(2) = ylabel('$\tau$ [sec]'); % \frac{1}{sec^2}
+% ind(3) = xlabel('$t_{go}$ [sec]');
+% set(ind, 'Interpreter', 'latex', 'fontsize', 22);
