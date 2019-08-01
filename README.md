@@ -13,6 +13,11 @@ Optimal Inertial Guidance, Line-of-Sight Guidance, Time-to-Go Equation. Jump Phe
 First and Second Pass Interception. Guaranteed Miss Distance. Linear Quadratic Guidance. 
 the Influence of the Interceptor Configuration on Miss-Distance.
 
+Demonstration from final project :
+
+
+![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/robust.png)
+
 
 088759 - [Advanced Topics in Missile Guidance Theory](https://www.graduate.technion.ac.il/Subjects.Eng/?Sub=88759)
 
