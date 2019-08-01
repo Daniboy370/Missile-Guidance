@@ -15,6 +15,7 @@ the Influence of the Interceptor Configuration on Miss-Distance.
 
 Demonstration from final project :
 
+![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/missile.png)
 
 ![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/robust.png)
 
