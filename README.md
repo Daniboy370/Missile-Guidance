@@ -24,3 +24,6 @@ Review of Proportional Navigation, Miss Distance Computation Using the Adjoint M
 4. Derive Linear Quadratic and Bounded Control Differential Games Based Linear Guidance Laws. 
 5. Synthesize Optimal Evasion Strategies from Homing Missiles, Using Optimal Control and the Adjoint Method. 
 6. Reduce the Order of a Linear Guidance Problem Using the Terminal Projection Transformation. 
+
+Demonstration from final project :
+![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/ATMG.png)
