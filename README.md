@@ -17,7 +17,7 @@ Demonstration from final project :
 
 ![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/missile.png)
 
-Which some of the results it gave :
+and some of the results it gave :
 ![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/robust.png)
 
 
