@@ -26,4 +26,6 @@ Review of Proportional Navigation, Miss Distance Computation Using the Adjoint M
 6. Reduce the Order of a Linear Guidance Problem Using the Terminal Projection Transformation. 
 
 Demonstration from final project :
+
+
 ![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/ATMG.png)
