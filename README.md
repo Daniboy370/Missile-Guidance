@@ -1,6 +1,7 @@
 # Missile-Guidance
-A collection of works towards thesis in Missile Guidance :
+A collection of works towards thesis in Missile Guidance.
 
+#
 038781 - [Robust Guidance and Control Via Min-Max](https://www.graduate.technion.ac.il/Subjects.Eng/?SUB=038781&SEM=201702).
 
 **Syllabus** :
@@ -20,7 +21,7 @@ Demonstration from final project :
 and some of the results it gave :
 ![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/robust.png)
 
-
+#
 088759 - [Advanced Topics in Missile Guidance Theory](https://www.graduate.technion.ac.il/Subjects.Eng/?Sub=88759)
 
 **Syllabus** :
@@ -36,3 +37,6 @@ Demonstration from final project :
 
 
 ![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/ATMG.png)
+
+## Requirements
+The code's executions run solely on a basic *Matlab* installation.
