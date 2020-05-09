@@ -1,7 +1,7 @@
 # Missile-Guidance
 A collection of works towards thesis in Missile Guidance.
 
-### 038781 - [Robust Guidance and Control Via Min-Max](https://www.graduate.technion.ac.il/Subjects.Eng/?SUB=038781&SEM=201702).
+## 038781 - Robust Guidance and Control Via Min-Max [link](https://www.graduate.technion.ac.il/Subjects.Eng/?SUB=038781&SEM=201702).
 
 **Syllabus** :
 Kinematics: Inertial, Line of Sight. Optimal Control, Differential Games. 
@@ -20,7 +20,7 @@ Demonstration from final project :
 and some of the results it gave :
 ![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/robust.png)
 
-## 088759 - [Advanced Topics in Missile Guidance Theory](https://www.graduate.technion.ac.il/Subjects.Eng/?Sub=88759)
+## 088759 - Advanced Topics in Missile Guidance Theory [link](https://www.graduate.technion.ac.il/Subjects.Eng/?Sub=88759)
 
 **Syllabus** :
 Review of Proportional Navigation, Miss Distance Computation Using the Adjoint Method, Optimal Evasive Strategies from Homing Missiles, Optimization of Guidance Laws for Homing Missiles, Derivation of Advanced Guidance Laws for Homing Missiles, Deerivation of Advanced Guidance Laws Using Differential Games Theory. on Successful Competition of This Course, Students Should Be Able to: 
