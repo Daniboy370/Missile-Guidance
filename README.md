@@ -1,7 +1,7 @@
 # Missile-Guidance
 A collection of works towards thesis in Missile Guidance.
 
-## 038781 - Robust Guidance and Control Via Min-Max [link](https://www.graduate.technion.ac.il/Subjects.Eng/?SUB=038781&SEM=201702).
+## 038781 - Robust Guidance and Control Via Min-Max [[link]](https://www.graduate.technion.ac.il/Subjects.Eng/?SUB=038781&SEM=201702).
 
 **Syllabus** :
 Kinematics: Inertial, Line of Sight. Optimal Control, Differential Games. 
