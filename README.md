@@ -7,7 +7,7 @@
 2. Ground radars detect typical signal returns of launches.
 3. Being uncontrollable nor maneuverable, flight trajectory of the rockets can be estimated in a good approximation.
 4. After filtration, measurements are fused into a single state vector, used for the GNC initial conditions.
-5. When optimal conditions are met, interceptors are launched, while continuously computing the dynamic pursuit. 
+5. When optimal conditions are met, [interceptors](https://en.wikipedia.org/wiki/Iron_Dome) are launched, while continuously computing the dynamic pursuit. 
 
 
 ## [[038781](https://www.graduate.technion.ac.il/Subjects.Eng/?SUB=038781&SEM=201702)] - Robust Guidance and Control Via Min-Max
