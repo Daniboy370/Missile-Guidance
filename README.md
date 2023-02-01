@@ -1,5 +1,14 @@
-# Missile-Guidance
-A collection of works towards thesis in Missile Guidance.
+### Optimal guidance at work
+---
+
+![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/Iron-Dome.jpg)
+
+1. A volley of Hamas rockets (*right*) is fired from the Gaza Strip towards Israeli cities.
+2. Ground radars detect typical signal returns of launches.
+3. Being uncontrollable nor maneuverable, flight trajectory of the rockets can be estimated in a good approximation.
+4. After filtration, signals are fused into a thin state vector, using as initial conditions for the GNC problem.
+5. When optimal conditions are met, interceptors are shot, while continuously computing the dynamic pursuit (*left*). 
+
 
 ## 038781 - Robust Guidance and Control Via Min-Max [[link](https://www.graduate.technion.ac.il/Subjects.Eng/?SUB=038781&SEM=201702)].
 
