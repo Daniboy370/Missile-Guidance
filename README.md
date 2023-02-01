@@ -10,7 +10,7 @@
 5. When optimal conditions are met, interceptors are shot, while continuously computing the dynamic pursuit (*left*). 
 
 
-## 038781 - Robust Guidance and Control Via Min-Max [[link](https://www.graduate.technion.ac.il/Subjects.Eng/?SUB=038781&SEM=201702)].
+## [[038781](https://www.graduate.technion.ac.il/Subjects.Eng/?SUB=038781&SEM=201702)] - Robust Guidance and Control Via Min-Max
 
 **Syllabus** :
 Kinematics: Inertial, Line of Sight. Optimal Control, Differential Games. 
@@ -29,7 +29,7 @@ Demonstration from final project :
 and some of the results it gave :
 ![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/robust.png)
 
-## 088759 - Advanced Topics in Missile Guidance Theory [[link](https://www.graduate.technion.ac.il/Subjects.Eng/?Sub=88759)]
+## [[088759](https://www.graduate.technion.ac.il/Subjects.Eng/?Sub=88759)] - Advanced Topics in Missile Guidance Theory 
 
 **Syllabus** :
 Review of Proportional Navigation, Miss Distance Computation Using the Adjoint Method, Optimal Evasive Strategies from Homing Missiles, Optimization of Guidance Laws for Homing Missiles, Derivation of Advanced Guidance Laws for Homing Missiles, Deerivation of Advanced Guidance Laws Using Differential Games Theory. on Successful Competition of This Course, Students Should Be Able to: 
