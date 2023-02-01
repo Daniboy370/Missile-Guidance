@@ -3,7 +3,7 @@
 ## Optimal guidance at work
 
 
-1. A volley of Hamas rockets (*right*) is fired from the Gaza Strip towards Israeli cities.
+1. A volley of Hamas rockets (*right*) is fired from Gaza strip towards Israeli cities.
 2. Ground radars detect typical signal returns of launches.
 3. Being uncontrollable nor maneuverable, flight trajectory of the rockets can be estimated in a good approximation.
 4. After filtration, signals are fused into a thin state vector, using as initial conditions for the GNC problem.
