@@ -1,7 +1,7 @@
-### Optimal guidance at work
----
-
 ![alt text](https://github.com/Daniboy370/Missile-Guidance/blob/master/Project_3/Iron-Dome.jpg)
+
+## Optimal guidance at work
+
 
 1. A volley of Hamas rockets (*right*) is fired from the Gaza Strip towards Israeli cities.
 2. Ground radars detect typical signal returns of launches.
